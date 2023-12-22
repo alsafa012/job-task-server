@@ -113,7 +113,6 @@ async function run() {
                          description: updated.description,
                          deadLine: updated.deadLine,
                          Priority: updated.Priority,
-                         // Priority: updated.Priority,
                     },
                };
                const result = await taskCollection.updateOne(
