@@ -113,6 +113,7 @@ async function run() {
                          description: updated.description,
                          deadLine: updated.deadLine,
                          Priority: updated.Priority,
+                         // Priority: updated.Priority,
                     },
                };
                const result = await taskCollection.updateOne(
@@ -121,7 +122,7 @@ async function run() {
                );
                res.send(result);
           });
-          
+
           app.delete("/allTasks/:id", async (req, res) => {
                const id = req.params.id;
                const query = { _id: new ObjectId(id) };
